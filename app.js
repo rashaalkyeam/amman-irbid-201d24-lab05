@@ -60,7 +60,7 @@ function sumAndMultiply(a, b, c) {
   let sumF= sum(sum1,c)[0];
   let product1= multiply(a,b)[0];
   let productF= multiply(product1,c)[0];
-  return [sumF,productF, '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.'];
+  return [sumF,productF, `${a} and ${b} and ${c} sum to ${sumF}.`, `The product of ${a} and ${b} and ${c} is ${productF}.`];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -85,8 +85,8 @@ function sumArray(sumArr) {
   //eslint-disable-line
 let i = 0;
   let sumArr1=sum(testArray[0],testArray[1])[0];
-  sumArr =sum(sumArr1,testArray[2])[0];
-  return [sumArr, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
+  let sumArr2 =sum(sumArr1,testArray[2])[0];
+  return [sumArr2, `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumArr2} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -109,8 +109,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) {
   let i = 0;
   let multArr1=multiply(testArray[0],testArray[1])[0];
-  multArr =multiply(multArr1,testArray[2])[0];
-  return [multArr, 'The numbers 2,3,4 have a product of 24.'];
+ let  multArr2 =multiply(multArr1,testArray[2])[0];
+  return [multArr2, `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multArr2}.`];
 
 }
 
@@ -145,7 +145,7 @@ function multiplyAnyArray(dynamicArray) {
     let dynamicArray1 = multiply(testDynamicArray[j],testDynamicArray[j++])[0];
     let dynamicArray2 = multiply(dynamicArray1,testDynamicArray[j++])[0];
     let dynamicArray3 = multiply(dynamicArray2,testDynamicArray[j++])[0];
-    dynamicArrayF = multiply(dynamicArray3,testDynamicArray[j++])[0]; 
+     dynamicArrayF = multiply(dynamicArray3,testDynamicArray[j++])[0]; 
   return [dynamicArrayF, 'The numbers 1,2,3,4,5 have a product of 120.'];
 }
 // Here is the test for multiplyArray(); uncomment it to run it
